@@ -45,10 +45,10 @@ The original task brief stays local because it contains source-system credential
 - Period: February 2025 through April 2026
 - Required segment: `Residential` and `SingleFamilyResidence`
 - Expected monthly files: 15
-- Valid monthly files: 14
-- July 2025 is an incomplete source CSV and is reported, then skipped
-- Raw rows loaded: 298,326
-- Filtered rows with a positive price: 149,200
+- Valid monthly files: 15
+- July 2025 was restored from a complete verified copy: 23,646 rows and 78 columns
+- Raw rows loaded: 321,972
+- Filtered rows with a positive price: 161,313
 
 ## Run
 
@@ -68,7 +68,7 @@ python -m jupyter nbconvert --to notebook --execute notebooks/01_exploration.ipy
 ## Main findings
 
 - Median close price: **$890,000**
-- Living area has the strongest simple relationship with price: **Spearman 0.51**
-- Lot size has the most missing values: **1.75%**
+- Living area has the strongest simple relationship with price: **Spearman 0.52**
+- Lot size has the most missing values: **1.74%**
 - The price distribution is strongly right-skewed and contains extreme values
 - Week 3 should handle duplicates, missing values, and unusual values before a time-based train/test split
